@@ -1,0 +1,37 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build tetris debug",
+            "type": "process",
+            "command": "C:/raylib/w64devkit/bin/mingw32-make.exe",
+            "args": [
+                "RAYLIB_PATH=C:/raylib/raylib",
+                "PROJECT_NAME=tetris",
+                "OBJS=tetris.cpp grid.cpp",
+                "BUILD_MODE=DEBUG",
+                "CC=g++",
+                "CFLAGS=-std=c++17 -Wall -Wno-missing-braces"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "label": "build tetris release",
+            "type": "process",
+            "command": "C:/raylib/w64devkit/bin/mingw32-make.exe",
+            "args": [
+                "RAYLIB_PATH=C:/raylib/raylib",
+                "PROJECT_NAME=tetris",
+                "OBJS=tetris.cpp grid.cpp",
+                "CC=g++",
+                "CFLAGS=-std=c++17 -Wall -Wno-missing-braces"
+            ],
+            "group": "build",
+            "problemMatcher": ["$gcc"]
+        }
+    ]
+}
