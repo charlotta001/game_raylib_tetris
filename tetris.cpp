@@ -1,6 +1,7 @@
 #include <iostream>
 #include "grid.h"
 #include "raylib.h"
+#include "color.h"
 
 
 
@@ -18,11 +19,11 @@ int main(void)
     SetTargetFPS(60);    
 
     Grid grid = Grid();
-    grid.Print();
     grid.grid[0][3] = 1;
     grid.grid[0][4] = 1;
     grid.grid[3][5] = 3;
     grid.grid[6][8] = 5;
+    grid.Print();
   
     // Main game loop
     while (!WindowShouldClose())    // Detect window close button or ESC key

@@ -1,13 +1,16 @@
 #include "grid.h"
+#include "color.h"
 
 Grid::Grid(){
     rows = 18;
     coloumns = 12;
     cellSize = 40;
     Initialize();
-    colors = GetCellColor();
+    colors = getCellColor();    // init all cell
 }
 
+
+// initialize grid with 0 value
 void Grid::Initialize(){
     for(int row = 0; row < rows; row++){
         for(int coloumn = 0; coloumn < coloumns; coloumn++){
@@ -17,6 +20,8 @@ void Grid::Initialize(){
 
 }
 
+
+// print grid value 0
 void Grid::Print(){
     for(int row = 0; row < rows; row++){
         for(int coloumn = 0; coloumn < coloumns; coloumn++){
@@ -27,17 +32,7 @@ void Grid::Print(){
 }
 
 
-std::vector<Color> Grid::GetCellColor(){
-Color merah  = {255, 0,   0,   255};
-Color kuning = {255, 255, 0,   255};
-Color hijau  = {0,   255, 0,   255};
-Color ungu   = {128, 0,   128, 255};
-Color biru   = {0,   0,   255, 255};
-Color hitam  = {0,   0,   0,   255};
-return {merah, kuning, hijau,ungu,biru,hitam};
-}
-
-
+// draw recatangle of grid 
 void Grid::Draw(){
     for(int row = 0; row < rows; row++){
         for(int coloumn = 0; coloumn < coloumns; coloumn++){

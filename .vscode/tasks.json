@@ -8,7 +8,7 @@
             "args": [
                 "RAYLIB_PATH=C:/raylib/raylib",
                 "PROJECT_NAME=tetris",
-                "OBJS=tetris.cpp grid.cpp",
+                "OBJS=tetris.cpp grid.cpp color.cpp",
                 "BUILD_MODE=DEBUG",
                 "CC=g++",
                 "CFLAGS=-std=c++17 -Wall -Wno-missing-braces"
@@ -26,7 +26,7 @@
             "args": [
                 "RAYLIB_PATH=C:/raylib/raylib",
                 "PROJECT_NAME=tetris",
-                "OBJS=tetris.cpp grid.cpp",
+                "OBJS=tetris.cpp grid.cpp color.cpp",
                 "CC=g++",
                 "CFLAGS=-std=c++17 -Wall -Wno-missing-braces"
             ],

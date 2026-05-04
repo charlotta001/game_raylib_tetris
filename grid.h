@@ -13,9 +13,9 @@ class Grid{
     int grid [18][12];
 
     private:
-    std::vector <Color> GetCellColor();   // function return vector <Color>
     int rows;
     int coloumns;
     int cellSize;
-    std::vector <Color> colors;
+    std::vector<Color> colors;
+  
 };
