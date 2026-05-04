@@ -37,7 +37,7 @@ void Grid::Draw(){
     for(int row = 0; row < rows; row++){
         for(int coloumn = 0; coloumn < coloumns; coloumn++){
             int cellValue = grid[row][coloumn];
-            DrawRectangle(coloumn * cellSize + 1 , row * cellSize + 1, cellSize - 1, cellSize - 1, colors[cellValue]);
+            DrawRectangle(coloumn * cellSize + 1 , row * cellSize + 1, cellSize - 1, cellSize - 1, colors[cellValue]); // why colors[cellValue] can give a color, cuz colors = getCellColor()?
         }
     }
 }

@@ -2,9 +2,7 @@
 #include "grid.h"
 #include "raylib.h"
 #include "color.h"
-
-
-
+#include "blocks.cpp"
 void printGrid(int rows, int columns);
 //------------------------------------------------------------------------------------
 // Program main entry point
@@ -19,12 +17,9 @@ int main(void)
     SetTargetFPS(60);    
 
     Grid grid = Grid();
-    grid.grid[0][3] = 1;
-    grid.grid[0][4] = 1;
-    grid.grid[3][5] = 3;
-    grid.grid[6][8] = 5;
+    LBlock lblock = LBlock();
     grid.Print();
-  
+
     // Main game loop
     while (!WindowShouldClose())    // Detect window close button or ESC key
     {
@@ -32,10 +27,10 @@ int main(void)
         BeginDrawing();
             ClearBackground(DARKBLUE);
             grid.Draw();
+            lblock.Draw();
             currentFps = GetFPS();
             DrawText(TextFormat("FPS : %d", currentFps) ,10,20,20,GREEN);
-            DrawText("tetromino coming soon", 190, 200, 20, LIGHTGRAY);
-
+            DrawText("tetromino coming soon", 100, 240, 20, LIGHTGRAY);
         EndDrawing();
     }
     CloseWindow();        // Close window and OpenGL context
